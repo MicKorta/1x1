@@ -1,0 +1,15 @@
+@import '../../../../../styles.scss';
+
+.progress-bar  {
+  position: absolute;
+  bottom: 15px;
+  width: 99%;
+  text-align: center;
+}
+
+.time-bar {
+  position: absolute;
+  bottom: 5px;
+  width: 99%;
+  text-align: center;
+}

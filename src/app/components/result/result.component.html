@@ -1,0 +1,11 @@
+<div class="card flex-column">
+  <div><h1>Ergebnis</h1></div>
+  <div>Richtige Anworten: {{correctAnswersAmount}}</div>
+  <div>Fehlversuche: {{incorrectAnswersAmount}}</div>
+  <div *ngIf="tasksLeft === 0">Du hast alle Aufgaben geschafft!</div>
+  <div *ngIf="tasksLeft > 0">{{ tasksLeft }} Aufgaben hast du nicht mehr geschafft.</div>
+  <div style="width: 100%; padding-top: 20px" class="flex-row flex-center">
+    <button style="width: 120px; margin-right: 20px" mat-raised-button type="button" (click)="restart()">Wiederholung</button>
+    <button style="width: 120px" mat-raised-button type="button" (click)="exit()">Ende</button>
+  </div>
+</div>

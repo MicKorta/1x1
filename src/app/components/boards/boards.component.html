@@ -1,0 +1,35 @@
+<div class="flex-row flex-center" style="width: 100%; margin-bottom: 2%">
+
+  <div style="width: 5%"></div>
+
+  <div style="width: 20%">
+    <div style="text-align: center" id="information-board-1" class="information-board crosshair" (click)="hit(task.resultProposal_1.value, 'information-board-1')" [@slideOut]="boardAnimation_1" [@tada]="tadaAnimation_1" [@shake]="shakeAnimation_1">
+      {{task.resultProposal_1.value}}
+    </div>
+  </div>
+
+  <div style="width: 5%"></div>
+
+  <div style="width: 20%">
+    <div id="information-board-2" class="information-board crosshair" (click)="hit(task.resultProposal_2.value, 'information-board-2')" [@slideOut]="boardAnimation_2" [@tada]="tadaAnimation_2" [@shake]="shakeAnimation_2">
+      {{task.resultProposal_2.value}}
+    </div>
+  </div>
+
+  <div style="width: 5%"></div>
+
+  <div style="width: 20%">
+    <div id="information-board-3" class="information-board crosshair" (click)="hit(task.resultProposal_3.value, 'information-board-3')" [@slideOut]="boardAnimation_3" [@tada]="tadaAnimation_3" [@shake]="shakeAnimation_3">
+      {{task.resultProposal_3.value}}
+    </div>
+  </div>
+
+  <div style="width: 5%"></div>
+
+  <div style="width: 20%">
+    <div id="information-board-4" class="information-board crosshair" (click)="hit(task.resultProposal_4.value, 'information-board-4')" [@slideOut]="boardAnimation_4" [@tada]="tadaAnimation_4" [@shake]="shakeAnimation_4">
+      {{task.resultProposal_4.value}}
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+.header-text {
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.main-header-text {
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.sub-header-text {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.standard-text {
+	font-size: 14px;
+}
+
+.content {
+  margin: 20px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}

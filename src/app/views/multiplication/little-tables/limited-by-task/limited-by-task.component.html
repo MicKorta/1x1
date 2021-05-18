@@ -1,0 +1,60 @@
+<div class="flex-center">
+
+  <div id="smiley_t_1" class="smiley_t_1" [@smileyInOut]="smiley_true_1"></div>
+  <div id="smiley_t_2" class="smiley_t_2" [@smileyInOut]="smiley_true_2"></div>
+  <div id="smiley_t_3" class="smiley_t_3" [@smileyInOut]="smiley_true_3"></div>
+  <div id="smiley_t_4" class="smiley_t_4" [@smileyInOut]="smiley_true_4"></div>
+  <div id="smiley_t_5" class="smiley_t_5" [@smileyInOut]="smiley_true_5"></div>
+
+  <div id="smiley_f_1" class="smiley_f_1" [@smileyInOut]="smiley_false_1"></div>
+  <div id="smiley_f_2" class="smiley_f_2" [@smileyInOut]="smiley_false_2"></div>
+  <div id="smiley_f_3" class="smiley_f_3" [@smileyInOut]="smiley_false_3"></div>
+  <div id="smiley_f_4" class="smiley_f_4" [@smileyInOut]="smiley_false_4"></div>
+
+  <div style="width: 30%; height: 100px; text-align: center; margin-top: 10%">
+    <app-task *ngIf="showTask()" [task]="_currentTask" [zoomAnimation]="zoomAnimation"></app-task>
+
+    <app-result *ngIf="_showResults"
+        [correctAnswersAmount]="_correctAnswersAmount"
+        [incorrectAnswersAmount]="_incorrectAnswersAmount"
+        [totalTaskAmount]="_game.tasks.length"
+        (onExit)="onExit()"
+        (onRestart)="onRestart()"></app-result>
+</div>
+
+<div *ngIf="!_showResults" class="flex-center information-board-container">
+   <app-boards style="width: 100%"
+        [task]="_currentTask"
+        [boardAnimation_1]="boardAnimation_1"
+        [boardAnimation_2]="boardAnimation_2"
+        [boardAnimation_3]="boardAnimation_3"
+        [boardAnimation_4]="boardAnimation_4"
+        [tadaAnimation_1]="tadaAnimation_1"
+        [tadaAnimation_2]="tadaAnimation_2"
+        [tadaAnimation_3]="tadaAnimation_3"
+        [tadaAnimation_4]="tadaAnimation_4"
+        [shakeAnimation_1]="shakeAnimation_1"
+        [shakeAnimation_2]="shakeAnimation_2"
+        [shakeAnimation_3]="shakeAnimation_3"
+        [shakeAnimation_4]="shakeAnimation_4"
+        (onHit)="onHit($event)"></app-boards>
+  </div>
+</div>
+
+<div *ngIf="!_showResults" class="time-bar">
+  <mat-progress-bar mode="determinate" [(value)]="timeProgress" style="height: 10px"></mat-progress-bar>
+</div>
+
+<div *ngIf="!_showResults" class="progress-bar">
+  <mat-progress-bar mode="determinate" [(value)]="_taskProgress" style="height: 10px"></mat-progress-bar>
+</div>
+
+<div class="clock">
+  {{timeLeft}}
+</div>
+
+<div class="crown">
+  {{_points}}
+</div>
+
+

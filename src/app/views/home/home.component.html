@@ -1,0 +1,37 @@
+<div class="content">
+
+  <h2 style="margin-top: 3%">Bitte wähle alle Zahlen aus, die du üben möchtest:</h2>
+
+  <div style="margin-top: 5%">
+    <div class="flex-center">
+      <mat-button-toggle-group multiple="true" #group="matButtonToggleGroup" (change)="change(group)" [value]="selectedTables">
+        <mat-button-toggle value="2"><span><h2>1 x 2</h2></span></mat-button-toggle>
+        <mat-button-toggle value="3"><span><h2>1 x 3</h2></span></mat-button-toggle>
+        <mat-button-toggle value="4"><span><h2>1 x 4</h2></span></mat-button-toggle>
+        <mat-button-toggle value="5"><span><h2>1 x 5</h2></span></mat-button-toggle>
+        <mat-button-toggle value="6"><span><h2>1 x 6</h2></span></mat-button-toggle>
+        <mat-button-toggle value="7"><span><h2>1 x 7</h2></span></mat-button-toggle>
+        <mat-button-toggle value="8"><span><h2>1 x 8</h2></span></mat-button-toggle>
+        <mat-button-toggle value="9"><span><h2>1 x 9</h2></span></mat-button-toggle>
+        <mat-button-toggle value="10"><span><h2>1 x 10</h2></span></mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <div class="flex-center flex-row" style="margin-top: 5%">
+      <div style="margin-right: 20px"><button style="width: 420px" mat-raised-button type="button" (click)="start(GameType.TASK)" [disabled]="startDisabled()">{{ taskAmountInfo }} Aufgaben in möglichst kurzer Zeit</button></div>
+      <div><h2>oder</h2></div>
+      <div style="margin-left: 20px"><button style="width: 420px"  mat-raised-button type="button" (click)="start(GameType.TIME)" [disabled]="startDisabled()">Möglichst viele Aufgaben innerhalb von 10 Minuten</button></div>
+    </div>
+  </div>
+
+  <div class="footer flex-row" style="width: 30%">
+    <div><a class="link" (click)="impressum()" style="margin-left: 10px"><strong>Impressum</strong></a></div>
+    <div class="spacer"></div>
+    <div  style="margin-right: 10px">v0.5.272</div>
+  </div>
+</div>
+
+
+
+
+
